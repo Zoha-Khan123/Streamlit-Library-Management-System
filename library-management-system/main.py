@@ -11,7 +11,6 @@ url: str = os.environ.get("SUPABASE_URL")
 key: str = os.environ.get("SUPABASE_KEY")
 supabase: Client = create_client(url, key)
 
-
 # ============== Set up Streamlit page configuration =============
 st.set_page_config(page_title="Library Management System",page_icon="📚",)
 
