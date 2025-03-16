@@ -113,7 +113,7 @@ with tab5:
             if data.data:
                 search_results_df = pd.DataFrame(data.data)  # Convert search result to DataFrame
                 st.write("📚 **Search Results:**")
-                st.table(search_results_df)  # Display the search results
+                st.dataframe(search_results_df)  # Display the search results
             else:
                 st.warning("⚠️ No book found with this title.")
         else:
@@ -122,7 +122,7 @@ with tab5:
 
 # =================== Library Statistics ===================================
 with tab6:
-    st.header("📊 Library Statistics")
+    st.title("📊 :rainbow[Library Statistics]")
     response = supabase.table("library-management").select("*").execute()
     book_store = response.data
     if book_store:
